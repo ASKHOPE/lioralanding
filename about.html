@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Liora Media – our mission, our story, and the team building the future of social media automation.">
+    <title>About Us | Liora Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* ── Page Layout ─────────────────────────── */
+        .pg-hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 9rem 2rem 5rem;
+            text-align: center;
+        }
+        .pg-hero h1 {
+            font-family: 'Bagnard', serif;
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+        }
+        .pg-hero p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        /* ── Mission Strip ─────────────────────────── */
+        .mission-strip {
+            background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(168,85,247,0.08));
+            border-top: 1px solid rgba(99,102,241,0.15);
+            border-bottom: 1px solid rgba(99,102,241,0.15);
+            padding: 5rem 2rem;
+        }
+        .mission-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .mission-strip h2 {
+            font-family: 'Bagnard', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .mission-strip p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+        /* ── Story Section ─────────────────────────── */
+        .story-section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+        .story-section h2 {
+            font-family: 'Bagnard', serif;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+        }
+        .story-section p {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            font-size: 1.05rem;
+            margin-bottom: 1.4rem;
+        }
+        /* ── Values Grid ─────────────────────────── */
+        .values-section {
+            padding: 4rem 2rem 6rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .values-section > h2 {
+            font-family: 'Bagnard', serif;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .value-card {
+            padding: 2.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+            border-color: rgba(168, 85, 247, 0.25);
+        }
+        .value-emoji {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .value-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .value-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        /* ── Built By Strip ─────────────────────────── */
+        .builtby-strip {
+            background: rgba(0,0,0,0.3);
+            border-top: 1px solid var(--border-color);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .builtby-strip h2 {
+            font-family: 'Bagnard', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .builtby-strip p {
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+        .builtby-badge {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem 2.5rem;
+            border-radius: 16px;
+        }
+        .builtby-badge .badge-text { color: var(--text-secondary); font-size: 0.85rem; }
+        .builtby-badge .badge-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* ── CTA Bar ─────────────────────────── */
+        .about-cta {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 5rem 2rem 8rem;
+            text-align: center;
+        }
+        .about-cta h2 {
+            font-family: 'Bagnard', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .about-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="css-logo" aria-label="Liora Media">
+                <div class="css-logo-wrapper">
+                    <span class="liora-text">LIORA</span>
+                    <span class="media-text">MEDIA</span>
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="careers.html">Careers</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="pg-hero">
+            <div class="badge">🌐 Our Story</div>
+            <h1>We're building the <span class="gradient-text">automation layer</span> for social media</h1>
+            <p>Liora Media was born from a simple frustration: managing social media for a growing brand was a full-time job in itself. We set out to change that.</p>
+        </section>
+
+        <!-- Mission -->
+        <div class="mission-strip">
+            <div class="mission-inner">
+                <h2>Our Mission</h2>
+                <p>To give every creator, founder, and brand the unfair advantage of consistent, intelligent, and scalable social media presence — without spending their life posting. We believe your energy should go into creating great products, not into copy-pasting content across five platforms.</p>
+            </div>
+        </div>
+
+        <!-- Our Story -->
+        <div class="story-section">
+            <h2>How it started</h2>
+            <p>Liora Media began in early 2026 with a single question: <em>"Why does managing social media still feel like a burden?"</em> Despite dozens of scheduling tools existing, creators and teams still found themselves buried in the repetitive cycle of writing, formatting, timing, and re-posting content for every platform.</p>
+            <p>The vision was clear from day one — not just a scheduler, but a full automation engine. One that understands your brand voice, learns what your audience responds to, and handles the operational grind so your creative team can focus on strategy and storytelling.</p>
+            <p>Built under the engineering and product umbrella of <strong><a href="https://amnextech.com" target="_blank" style="color:var(--accent-2);">AMNEXTECH</a></strong>, Liora Media is currently in its early product development phase — and we are moving fast. The platform supports native integrations with Twitter/X, Instagram, LinkedIn, Facebook, TikTok, YouTube, and Pinterest.</p>
+            <p>We are now opening the doors to our first users, early contributors, and investors who share our belief that the next generation of social media tooling should be <strong>intelligent, automated, and beautifully simple</strong>.</p>
+        </div>
+
+        <!-- Values -->
+        <section class="values-section">
+            <h2>What we stand for</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-emoji">⚡</div>
+                    <h3>Speed Over Perfection</h3>
+                    <p>We ship fast, learn fast, and iterate. The best products are built in the market, not in a planning room.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-emoji">🔒</div>
+                    <h3>Privacy by Design</h3>
+                    <p>Your social credentials, your brand data, your audience insights — they are yours. We are stewards, not owners.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-emoji">🤝</div>
+                    <h3>Creator First</h3>
+                    <p>Every feature we build starts with one question: does this give creators real leverage? If not, we don't ship it.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-emoji">🌍</div>
+                    <h3>Built to Scale</h3>
+                    <p>From solo founders to enterprise agencies — our architecture is designed to grow without breaking.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-emoji">💡</div>
+                    <h3>Radical Transparency</h3>
+                    <p>Our pricing, our roadmap, our limitations — we tell you everything. No dark patterns, no hidden fees.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-emoji">🚀</div>
+                    <h3>Community Driven</h3>
+                    <p>Our early users shape our product. We listen, we build, we ship — together with the people who rely on us daily.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Built By -->
+        <div class="builtby-strip">
+            <h2>Proud to be built by <span class="gradient-text">AMNEXTECH</span></h2>
+            <p>AMNEXTECH is a technology studio focused on building ambitious, scalable products for the next generation of internet users. Liora Media is our flagship SaaS product.</p>
+            <a href="https://amnextech.com" target="_blank" class="builtby-badge">
+                <span class="badge-text">A product by</span>
+                <span class="badge-name">AMNEXTECH</span>
+                <span class="badge-text">amnextech.com →</span>
+            </a>
+        </div>
+
+        <!-- CTA -->
+        <section class="about-cta">
+            <h2>Join us on this journey</h2>
+            <p>Whether you're a creator looking for a better way to grow, an investor who sees the opportunity in social automation, or an engineer passionate about shipping great products — we'd love to connect.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn-primary btn-large">Get Early Access</a>
+                <a href="careers.html" class="btn-secondary btn-large">Join the Team</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom" style="text-align:center; padding: 2rem;">
+            <p>&copy; 2026 Liora Media · Built by <a href="https://amnextech.com" target="_blank" style="color:var(--accent-2)">AMNEXTECH</a> | <a href="privacy.html" style="color:var(--accent-2)">Privacy</a> · <a href="terms.html" style="color:var(--accent-2)">Terms</a> · <a href="cookie-policy.html" style="color:var(--accent-2)">Cookies</a></p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

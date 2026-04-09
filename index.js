@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Simple reveal animation on scroll for feature cards
-    const revealElements = document.querySelectorAll('.feature-card');
+    const revealElements = document.querySelectorAll('.feature-card, .step-card, .testimonial-card, .pricing-card, .faq-item');
     
     const revealCallback = (entries, observer) => {
         entries.forEach(entry => {
@@ -55,7 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        el.style.transition = `all 0.5s ease 0s`; // removed cascaded delay to prevent hanging
         revealObserver.observe(el);
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Close all items
+            faqItems.forEach(faq => faq.classList.remove('active'));
+            // Toggle the clicked one
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
     });
 });
